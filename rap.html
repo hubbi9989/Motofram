@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Raport oględzin pojazdu</title>
+  <link rel="stylesheet" href="rap.css">
+  <script src="rap.js" defer></script>
+</head>
+<body>
+  <h1>Raport oględzin pojazdu</h1>
+  <form>
+    <!-- Sekcje 1 i 2 pozostają bez zmian -->
+    <fieldset>
+      <legend>1. Dane pojazdu</legend>
+      <label for="vin">VIN:</label>
+      <input type="text" id="vin" name="vin" />
+
+      <label for="marka">Marka:</label>
+      <input type="text" id="marka" name="marka" />
+
+      <label for="model">Model:</label>
+      <input type="text" id="model" name="model" />
+
+      <label for="rokProdukcji">Rok produkcji:</label>
+      <input type="number" id="rokProdukcji" name="rokProdukcji" />
+
+      <label for="pojemnoscSilnika">Pojemność silnika (cm3):</label>
+      <input type="number" id="pojemnoscSilnika" name="pojemnoscSilnika" />
+
+      <label for="moc">Moc (KM):</label>
+      <input type="number" id="moc" name="moc" />
+
+      <label for="przebieg">Przebieg (km):</label>
+      <input type="number" id="przebieg" name="przebieg" />
+
+      <label for="skrzyniaBiegow">Skrzynia biegów:</label>
+      <select id="skrzyniaBiegow" name="skrzyniaBiegow">
+        <option value="">-- wybierz --</option>
+        <option value="Manualna">Manualna</option>
+        <option value="Automatyczna">Automatyczna</option>
+        <option value="Półautomatyczna">Półautomatyczna</option>
+      </select>
+
+      <label for="rodzajPaliwa">Rodzaj paliwa:</label>
+      <select id="rodzajPaliwa" name="rodzajPaliwa">
+        <option value="">-- wybierz --</option>
+        <option value="Benzyna">Benzyna</option>
+        <option value="Benzyna + LPG">Benzyna + LPG</option>
+        <option value="CNG">CNG</option>
+        <option value="Diesel">Diesel</option>
+        <option value="Elektryczny">Elektryczny</option>
+        <option value="Etanol">Etanol</option>
+        <option value="Hybryda">Hybryda</option>
+        <option value="Hybryda PLUG-IN">Hybryda PLUG-IN</option>
+        <option value="Wodór">Wodór</option>
+      </select>
+
+      <label for="liczbaDrzwi">Liczba drzwi:</label>
+      <input type="number" id="liczbaDrzwi" name="liczbaDrzwi" />
+
+      <label for="dataPierwszejRejestracji">Data pierwszej rejestracji:</label>
+      <input type="date" id="dataPierwszejRejestracji" name="dataPierwszejRejestracji" />
+
+      <label for="dataPierwszejRejestracjiPL">Data pierwszej rejestracji w Polsce:</label>
+      <input type="date" id="dataPierwszejRejestracjiPL" name="dataPierwszejRejestracjiPL" />
+
+      <label for="krajPochodzenia">Kraj pochodzenia:</label>
+      <input type="text" id="krajPochodzenia" name="krajPochodzenia" />
+
+      <label for="numerRejestracyjny">Numer rejestracyjny:</label>
+      <input type="text" id="numerRejestracyjny" name="numerRejestracyjny" />
+
+      <label for="dowodRejestracyjny">Dowód rejestracyjny:</label>
+      <select id="dowodRejestracyjny" name="dowodRejestracyjny">
+        <option value="">-- wybierz --</option>
+        <option value="TAK">TAK</option>
+        <option value="NIE">NIE</option>
+      </select>
+
+      <label for="przegladDo">Przegląd do:</label>
+      <input type="date" id="przegladDo" name="przegladDo" />
+
+      <label for="ubezpieczenieOCDo">Ubezpieczenie OC do:</label>
+      <input type="date" id="ubezpieczenieOCDo" name="ubezpieczenieOCDo" />
+
+      <label for="weryfikacjaWarsztatASO">Możliwa weryfikacja w warsztacie lub ASO:</label>
+      <select id="weryfikacjaWarsztatASO" name="weryfikacjaWarsztatASO">
+        <option value="">-- wybierz --</option>
+        <option value="TAK">TAK</option>
+        <option value="NIE">NIE</option>
+      </select>
+
+      <label for="formaSprzedazy">Forma sprzedaży:</label>
+      <select id="formaSprzedazy" name="formaSprzedazy">
+        <option value="">-- wybierz --</option>
+        <option value="Faktura VAT">Faktura VAT</option>
+        <option value="Umowa kupna-sprzedaży">Umowa kupna-sprzedaży</option>
+      </select>
+
+      <label for="iloscWlascicieli">Ilość właścicieli:</label>
+      <input type="number" id="iloscWlascicieli" name="iloscWlascicieli" />
+
+      <label for="pojazdSerwisowany">Pojazd serwisowany:</label>
+      <select id="pojazdSerwisowany" name="pojazdSerwisowany">
+        <option value="">-- wybierz --</option>
+        <option value="TAK">TAK</option>
+        <option value="NIE">NIE</option>
+      </select>
+
+      <label for="iloscKluczykow">Ilość kluczyków:</label>
+      <input type="number" id="iloscKluczykow" name="iloscKluczykow" />
+
+      <label for="dodatkowyKompletOpon">Dodatkowy komplet opon:</label>
+      <select id="dodatkowyKompletOpon" name="dodatkowyKompletOpon">
+        <option value="">-- wybierz --</option>
+        <option value="TAK">TAK</option>
+        <option value="NIE">NIE</option>
+      </select>
+
+      <label for="rodzajOlei">Rodzaj oleju:</label>
+      <input type="text" id="rodzajOlei" name="rodzajOlei" />
+
+      <label for="odKiedyWPosiadaniu">Od kiedy w posiadaniu sprzedającego:</label>
+      <input type="date" id="odKiedyWPosiadaniu" name="odKiedyWPosiadaniu" />
+    </fieldset>
+
+    <fieldset>
+      <legend>2. Dane sprzedającego</legend>
+      <label for="imieSprzedajacego">Imię:</label>
+      <input type="text" id="imieSprzedajacego" name="imieSprzedajacego" />
+
+      <label for="numerTelefonuSprzedajacego">Numer telefonu:</label>
+      <input type="tel" id="numerTelefonuSprzedajacego" name="numerTelefonuSprzedajacego" />
+
+      <label for="emailSprzedajacego">Adres e-mail:</label>
+      <input type="email" id="emailSprzedajacego" name="emailSprzedajacego" />
+
+      <label for="kodPocztowySprzedajacego">Kod pocztowy:</label>
+      <input type="text" id="kodPocztowySprzedajacego" name="kodPocztowySprzedajacego" />
+
+      <label for="dataOgledzin">Data oględzin:</label>
+      <input type="date" id="dataOgledzin" name="dataOgledzin" />
+    </fieldset>
+
+    <!-- Sekcja 3 -->
+    <fieldset>
+      <legend>3. Grubość powłoki lakierniczej</legend>
+      <table>
+        <thead>
+          <tr><th>Element</th><th>µm</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Maska</td><td><input name="maska"></td></tr>
+          <tr><td>Dach</td><td><input name="dach"></td></tr>
+          <tr><td>Błotnik lewy przód</td><td><input name="blotnikLewyPrzod"></td></tr>
+          <tr><td>Drzwi lewe przód</td><td><input name="drzwiLewePrzod"></td></tr>
+          <tr><td>Słupek A lewy</td><td><input name="slupekALewy"></td></tr>
+          <tr><td>Drzwi tył lewe</td><td><input name="drzwiTylLewe"></td></tr>
+          <tr><td>Słupek B lewy</td><td><input name="slupekBLewy"></td></tr>
+          <tr><td>Błotnik tył lewy</td><td><input name="blotnikTylLewy"></td></tr>
+          <tr><td>Słupek C lewy</td><td><input name="slupekCLewy"></td></tr>
+          <tr><td>Klapa tylna</td><td><input name="klapaTylna"></td></tr>
+          <tr><td>Słupek C prawy</td><td><input name="slupekCPrawy"></td></tr>
+          <tr><td>Błotnik tył prawy</td><td><input name="blotnikTylPrawy"></td></tr>
+          <tr><td>Drzwi tył prawe</td><td><input name="drzwiTylPrawe"></td></tr>
+          <tr><td>Słupek B prawy</td><td><input name="slupekBPrawy"></td></tr>
+          <tr><td>Drzwi przód prawe</td><td><input name="drzwiPrzodPrawe"></td></tr>
+          <tr><td>Słupek A prawy</td><td><input name="slupekAPrawy"></td></tr>
+          <tr><td>Błotnik przód prawy</td><td><input name="blotnikPrzodPrawy"></td></tr>
+        </tbody>
+      </table>
+      <label>Uwagi o lakierze:<br><textarea name="uwagiLakier" rows="4" cols="50"></textarea></label>
+    </fieldset>
+
+    <!-- Sekcja 4 -->
+    <fieldset>
+      <legend>4. Pomiar szczelin</legend>
+      <table>
+        <thead>
+          <tr><th>Element</th><th>mm</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Błotnik prawy przód z maską</td><td><input name="szczelina1"></td></tr>
+          <tr><td>Drzwi prawe przednie z błotnikiem przednim prawym</td><td><input name="szczelina2"></td></tr>
+          <tr><td>Drzwi prawe przednie / drzwi prawe tylne</td><td><input name="szczelina3"></td></tr>
+          <tr><td>Drzwi prawe tylne z błotnikiem tylnym prawym</td><td><input name="szczelina4"></td></tr>
+          <tr><td>Klapa tylna</td><td><input name="szczelina5"></td></tr>
+          <tr><td>Drzwi lewe tylne z błotnikiem tylnym lewym</td><td><input name="szczelina6"></td></tr>
+          <tr><td>Drzwi lewe przednie / drzwi lewe tylne</td><td><input name="szczelina7"></td></tr>
+          <tr><td>Drzwi lewe przednie z błotnikiem przednim lewym</td><td><input name="szczelina8"></td></tr>
+          <tr><td>Błotnik lewy przód z maską</td><td><input name="szczelina9"></td></tr>
+        </tbody>
+      </table>
+    </fieldset>
+
+    <!-- Sekcja 5 -->
+    <fieldset>
+      <legend>5. Pomiar opon</legend>
+      <table>
+        <thead>
+          <tr>
+            <th>Pozycja</th><th>Producent</th><th>Model</th><th>Rozmiar</th><th>Data produkcji</th><th>Bieżnik wewn.</th><th>Bieżnik środek</th><th>Bieżnik zewn.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Przód L</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Tył L</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Tył P</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Przód P</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+        </tbody>
+      </table>
+    </fieldset>
+
+    <!-- Sekcja 6 -->
+    <fieldset>
+      <legend>6. Oględziny szyb</legend>
+      <table>
+        <thead>
+          <tr><th>Element</th><th>Producent</th><th>Numer</th><th>Rocznik</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Szyba przednia</td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Szyba boczna prawa przednia</td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Szyba boczna prawa tylna</td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Szyba karoseryjna prawa</td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Szyba klapy tylnej</td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Szyba karoseryjna lewa</td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Szyba boczna lewa tylna</td><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td>Szyba boczna lewa przednia</td><td><input></td><td><input></td><td><input></td></tr>
+        </tbody>
+      </table>
+    </fieldset>
+
+    <!-- Sekcja 7 -->
+    <fieldset>
+      <legend>7. Ostatnie naprawy / przeglądy</legend>
+      <textarea name="ostatnieNaprawy" rows="4" cols="80"></textarea>
+    </fieldset>
+
+    <!-- Sekcja 8 -->
+    <fieldset>
+      <legend>8. Planowane naprawy</legend>
+      <textarea name="planowaneNaprawy" rows="4" cols="80"></textarea>
+    </fieldset>
+
+    <!-- Sekcja 9 -->
+    <fieldset>
+      <legend>9. Uwagi i podsumowanie</legend>
+      <textarea name="uwagiPodsumowanie" rows="4" cols="80"></textarea>
+    </fieldset>
+
+    <p>
+      Historię auta zarejestrowanego w Polsce możesz łatwo sprawdzić w bazie
+      <a href="https://historiapojazdu.gov.pl" target="_blank">https://historiapojazdu.gov.pl</a>
+    </p>
+    <p>
+      Dane z powyższego raportu przedstawiają informację przekazane od właściciela, które nie są weryfikowane.
+      Stan faktyczny przedstawia tylko informacje, które zostały potwierdzone podczas oględzin na dzień weryfikacji wpisanej w raport.
+      Oględziny nie zostały przeprowadzone przez kwalifikowanego rzeczoznawcę oraz są danymi poglądowymi.
+    </p>
+
+    <button type="submit">Zapisz jako HTML</button>
+  </form>
+</body>
+</html>
